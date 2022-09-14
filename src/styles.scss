@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@use "~src/assets/sass/variables";
+
+:root {
+  --dark-color: #{variables.$dark-color};
+  --dark-alt-color: #{variables.$dark-alt-color};
+  --light-color: #{variables.$light-color};
+  --light-alt-color: #{variables.$light-alt-color};
+}
+
+body {
+  background-color: var(--background-theme);
+  color: var(--text-theme);
+}
+
+body.light-theme {
+	--text-theme: var(--dark-color);
+	--text-alt-theme: var(--dark-alt-color);
+  --border-theme: #15141430;
+	--border-alt-theme: 0 .25px 2.5px 0 var(--border-theme);
+	--background-theme: var(--light-color);
+	--background-alt-theme: var(--light-alt-color);
+}
+
+body.dark-theme {
+	--text-theme: var(--light-color);
+	--text-alt-theme: var(--light-alt-color);
+	--border-theme: #fbfbfb30;
+	--border-alt-theme: 0 .25px 2.5px 0 var(--border-theme);
+	--background-theme: var(--dark-color);
+	--background-alt-theme: var(--dark-color);
+}
